@@ -4,10 +4,10 @@ use strict;
 use warnings;
 
 my $drug_list=$ARGV[0];
-my $mapping_Uniprot=$ARGV[1];
+my $drug_target=$ARGV[1];
 my $output=$ARGV[2];
 open(D,$drug_list);
-open(M,$mapping_Uniprot);
+open(T,$drug_target);
 open(O,">$output");
 my @Drug;
 while(<D>){
@@ -16,7 +16,7 @@ while(<D>){
     push(@Drug,$i);
 }
 close D;
-while(<M>){
+while(<T>){
      my $i=$_;
      chomp($i);
      my @line =split (/\s+/,$i);
@@ -37,5 +37,5 @@ while(<M>){
        }
 }
  
-close M;
+close T;
 close O;
