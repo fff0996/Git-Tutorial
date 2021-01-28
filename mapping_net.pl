@@ -8,11 +8,14 @@ my $output=$ARGV[2];
 
 my %hash;
 open(E,$ENSP_ENTREZ);
+#make mapping table
+#use hash
 while(<E>){
 
     my $i=$_;
     chomp($i);
-    $i =~ s///g;
+    $i =~ s/
+//g;
     my ($ENSP,$ENTREZ)=split(/\t/,$i);
     if(exists $hash{$ENSP}){
 	print $i,"\n";
@@ -22,6 +25,7 @@ while(<E>){
      }
 }
 close E;
+#mapping
 open(N,$net);
 open(O,">$output");
 while(<N>){
@@ -31,18 +35,9 @@ while(<N>){
     my @line=split(/\s+/,$i);
 
     #print E $line[0],"\t";
-    for(my $index=0; $index<=1;$index++){
-
-        if((exists $hash{$line[$index]}) and ($hash{$line[$index]} ne 'NA')){
-                                                                             
-                print O $hash{$line[$index]}," ";
-        }
-	else{
-		print O $line[$index]," ";
-	} 
-
-    }
-    print O  $line[2],"\n";
+    if(exists $hash{$line[0]} and exists $hash{$line[1]}){print O $hash{$line[0]}," ",$hash{$line[1]}," ",$hash{$line[2]},"\n";}
+    else{next;}
+    
 
 }
 close N;
