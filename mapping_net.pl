@@ -14,6 +14,7 @@ while(<E>){
 
     my $i=$_;
     chomp($i);
+    #ctrl+ v+ m
     $i =~ s/^M//g;
     my ($ENSP,$ENTREZ)=split(/\t/,$i);
     if(exists $hash{$ENSP}){
@@ -34,7 +35,7 @@ while(<N>){
     my @line=split(/\s+/,$i);
 
     #print E $line[0],"\t";
-    if(exists $hash{$line[0]} and exists $hash{$line[1]}){print O $hash{$line[0]}," ",$hash{$line[1]}," ",$hash{$line[2]},"\n";}
+    if(exists $hash{$line[0]} and exists $hash{$line[1]}){print O $hash{$line[0]}," ",$hash{$line[1]}," ",$line[2],"\n";}
     else{next;}
     
 
