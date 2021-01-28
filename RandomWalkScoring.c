@@ -22,7 +22,7 @@ int main(int argc, int **argv){
 		geneNum++;
 	}
 	fclose(wholeGene);
-	printf("%d",geneNum);
+	//printf("%d",geneNum);
 
 //make network;
         int i,j;
