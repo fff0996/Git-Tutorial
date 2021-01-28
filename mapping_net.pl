@@ -14,8 +14,7 @@ while(<E>){
 
     my $i=$_;
     chomp($i);
-    $i =~ s/
-//g;
+    $i =~ s/^M//g;
     my ($ENSP,$ENTREZ)=split(/\t/,$i);
     if(exists $hash{$ENSP}){
 	print $i,"\n";
