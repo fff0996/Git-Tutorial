@@ -23,7 +23,7 @@ attributes <- listAttributes(ensembl)
 target <- read.table("target.txt")
 uniprot <- target[,1]
 #make mapping table
-#fill out target type
+# target -> gene_ID(Entrez)
 mapping <- getBM(filters="uniprotswissprot",attributes = c("uniprotswissprot","ensembl_peptide_id"),
                  values=uniprot,mart=ensembl)
 #make output file
@@ -32,7 +32,7 @@ write.table(mapping,"C:/Users/fff09/Documents/Uniprotswissprot_to_entrezgene_id.
 ENSP <- read.table("ENSP.txt")
 ENSP <- ENSP[,1]
 #make mapping table
-#fill out target type
+#taget -> gene_ID(Entrez)
 ENSP_to_ENTREZ <- getBM(filters="ensembl_peptide_id",attributes = c("ensembl_peptide_id","entrezgene_id"),
                         values=ENSP,mart=ensembl)
 #make output file
