@@ -20,3 +20,21 @@ target2\tgene_ID2
 target3\tgene_ID3
 ...
 `````````````````````
+cut.pl
+==================================
+we want to delete elements that don't have Targets
+
+input file : element_targets.txt
+```````
+element1\ttarget1\ttarget2\ttarget3...
+element2\ttarget3\ttarget5..
+element3
+element4\ttarget2\ttarget9\ttarget8....
+```````
+
+output file: delete elements that don't have Targets
+````````
+element1\ttarget1\ttarget2\ttarget3...
+element2\ttarget3\ttarget5..
+element4\ttarget2\ttarget9\ttarget8....
+```````
