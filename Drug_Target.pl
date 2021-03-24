@@ -10,6 +10,14 @@ sub Drug_Target{
    }
 }
 
+#filter ; only we leave elements that we want
+#\hash table, qeury
+sub filter{
+   my($hash,$quer)=@_;
+   if(exists %$hash{$query}){ return 1;}
+   else{ return 0;}
+}
+
 
 
    
