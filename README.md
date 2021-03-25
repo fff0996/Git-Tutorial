@@ -1,4 +1,4 @@
-# ID_mapping
+# mapping
 
 mapping.R
 ==================================
