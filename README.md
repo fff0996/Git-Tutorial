@@ -1,6 +1,6 @@
 # mapping
 It is a directory where codes for functions related to mapping that switch 
-from A to B
+from A to B are stored.
 
 mapping.R
 ==================================
