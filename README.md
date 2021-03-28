@@ -1,6 +1,7 @@
 # mapping
 It is a directory where codes for functions related to mapping that switch 
 from A to B
+
 mapping.R
 ==================================
 This mapping table is mapped by R  
