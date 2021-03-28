@@ -9,7 +9,7 @@ database is gotten by **biomart**
 
 target -> gene_ID(Entrez,Homosapience)
 
-input file: target.txt (uniport,Esembl,..)
+input file: target.txt (uniport,Ensembl,..)
 ```````
 target1
 target2
