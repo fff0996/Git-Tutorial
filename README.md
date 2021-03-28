@@ -4,7 +4,7 @@ from A to B are stored.
 
 mapping.R
 ==================================
-It is code that makes mapping talbe using R.  
+It is code that makes mapping table using R.  
 database is gotten by **biomart**
 
 target -> gene_ID(Entrez,Homosapience)
